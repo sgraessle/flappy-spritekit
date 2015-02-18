@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C586D1A8EC0D000C9D5C8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */; };
 		D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20A71A8D65AA00510971 /* AppDelegate.swift */; };
 		D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2EB20A91A8D65AA00510971 /* GameScene.sks */; };
 		D2EB20AC1A8D65AA00510971 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20AB1A8D65AA00510971 /* GameScene.swift */; };
@@ -15,6 +16,7 @@
 		D2EB20B31A8D65AA00510971 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2EB20B21A8D65AA00510971 /* Images.xcassets */; };
 		D2EB20B61A8D65AA00510971 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2EB20B41A8D65AA00510971 /* LaunchScreen.xib */; };
 		D2EB20C21A8D65AB00510971 /* FlappyStacheSKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20C11A8D65AB00510971 /* FlappyStacheSKTests.swift */; };
+		D2EB20CE1A8E5AF900510971 /* HeroSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20CD1A8E5AF900510971 /* HeroSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		D2EB20A21A8D65AA00510971 /* FlappyStacheSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyStacheSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB20A61A8D65AA00510971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2EB20A71A8D65AA00510971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		D2EB20BB1A8D65AB00510971 /* FlappyStacheSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyStacheSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB20C01A8D65AB00510971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2EB20C11A8D65AB00510971 /* FlappyStacheSKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyStacheSKTests.swift; sourceTree = "<group>"; };
+		D2EB20CD1A8E5AF900510971 /* HeroSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +85,9 @@
 		D2EB20A41A8D65AA00510971 /* FlappyStacheSK */ = {
 			isa = PBXGroup;
 			children = (
+				D2EB20CC1A8E5AC400510971 /* Sprites */,
+				D2EB20CB1A8E5AAE00510971 /* Scenes */,
 				D2EB20A71A8D65AA00510971 /* AppDelegate.swift */,
-				D2EB20A91A8D65AA00510971 /* GameScene.sks */,
-				D2EB20AB1A8D65AA00510971 /* GameScene.swift */,
 				D2EB20AD1A8D65AA00510971 /* GameViewController.swift */,
 				D2EB20AF1A8D65AA00510971 /* Main.storyboard */,
 				D2EB20B21A8D65AA00510971 /* Images.xcassets */,
@@ -116,6 +120,24 @@
 				D2EB20C01A8D65AB00510971 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2EB20CB1A8E5AAE00510971 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB20A91A8D65AA00510971 /* GameScene.sks */,
+				D2EB20AB1A8D65AA00510971 /* GameScene.swift */,
+				D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		D2EB20CC1A8E5AC400510971 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB20CD1A8E5AF900510971 /* HeroSprite.swift */,
+			);
+			name = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +224,7 @@
 				D2EB20B31A8D65AA00510971 /* Images.xcassets in Resources */,
 				D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */,
 				D2EB20B11A8D65AA00510971 /* Main.storyboard in Resources */,
+				D20C586D1A8EC0D000C9D5C8 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EB20CE1A8E5AF900510971 /* HeroSprite.swift in Sources */,
 				D2EB20AC1A8D65AA00510971 /* GameScene.swift in Sources */,
 				D2EB20AE1A8D65AA00510971 /* GameViewController.swift in Sources */,
 				D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */,
@@ -417,6 +441,7 @@
 				D2EB20C71A8D65AB00510971 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2EB20C81A8D65AB00510971 /* Build configuration list for PBXNativeTarget "FlappyStacheSKTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +450,7 @@
 				D2EB20CA1A8D65AB00510971 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
