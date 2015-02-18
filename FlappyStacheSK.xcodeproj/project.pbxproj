@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D20C586D1A8EC0D000C9D5C8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */; };
+		D20E0F5A1A950C2E000B0662 /* Hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F591A950C2E000B0662 /* Hero.atlas */; };
 		D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20A71A8D65AA00510971 /* AppDelegate.swift */; };
 		D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2EB20A91A8D65AA00510971 /* GameScene.sks */; };
 		D2EB20AC1A8D65AA00510971 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20AB1A8D65AA00510971 /* GameScene.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		D20E0F591A950C2E000B0662 /* Hero.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hero.atlas; sourceTree = "<group>"; };
 		D2EB20A21A8D65AA00510971 /* FlappyStacheSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyStacheSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB20A61A8D65AA00510971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2EB20A71A8D65AA00510971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 		D2EB20A41A8D65AA00510971 /* FlappyStacheSK */ = {
 			isa = PBXGroup;
 			children = (
+				D20E0F591A950C2E000B0662 /* Hero.atlas */,
 				D2EB20CC1A8E5AC400510971 /* Sprites */,
 				D2EB20CB1A8E5AAE00510971 /* Scenes */,
 				D2EB20A71A8D65AA00510971 /* AppDelegate.swift */,
@@ -127,7 +128,6 @@
 			children = (
 				D2EB20A91A8D65AA00510971 /* GameScene.sks */,
 				D2EB20AB1A8D65AA00510971 /* GameScene.swift */,
-				D20C586C1A8EC0D000C9D5C8 /* Storyboard.storyboard */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -221,10 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2EB20B61A8D65AA00510971 /* LaunchScreen.xib in Resources */,
+				D20E0F5A1A950C2E000B0662 /* Hero.atlas in Resources */,
 				D2EB20B31A8D65AA00510971 /* Images.xcassets in Resources */,
 				D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */,
 				D2EB20B11A8D65AA00510971 /* Main.storyboard in Resources */,
-				D20C586D1A8EC0D000C9D5C8 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
