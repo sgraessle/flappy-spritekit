@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D20E0F5A1A950C2E000B0662 /* Hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F591A950C2E000B0662 /* Hero.atlas */; };
+		D28823501A9693EC0093A50E /* PlatformSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288234F1A9693EC0093A50E /* PlatformSprite.swift */; };
+		D2D837B21A97A1710095449C /* TiledSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D837B11A97A1710095449C /* TiledSprite.swift */; };
 		D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20A71A8D65AA00510971 /* AppDelegate.swift */; };
 		D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2EB20A91A8D65AA00510971 /* GameScene.sks */; };
 		D2EB20AC1A8D65AA00510971 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20AB1A8D65AA00510971 /* GameScene.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		D20E0F591A950C2E000B0662 /* Hero.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hero.atlas; sourceTree = "<group>"; };
+		D288234F1A9693EC0093A50E /* PlatformSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformSprite.swift; sourceTree = "<group>"; };
+		D2D837B11A97A1710095449C /* TiledSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledSprite.swift; sourceTree = "<group>"; };
 		D2EB20A21A8D65AA00510971 /* FlappyStacheSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyStacheSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB20A61A8D65AA00510971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2EB20A71A8D65AA00510971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				D2EB20CD1A8E5AF900510971 /* HeroSprite.swift */,
+				D288234F1A9693EC0093A50E /* PlatformSprite.swift */,
+				D2D837B11A97A1710095449C /* TiledSprite.swift */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 				D2EB20CE1A8E5AF900510971 /* HeroSprite.swift in Sources */,
 				D2EB20AC1A8D65AA00510971 /* GameScene.swift in Sources */,
 				D2EB20AE1A8D65AA00510971 /* GameViewController.swift in Sources */,
+				D2D837B21A97A1710095449C /* TiledSprite.swift in Sources */,
+				D28823501A9693EC0093A50E /* PlatformSprite.swift in Sources */,
 				D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

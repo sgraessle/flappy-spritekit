@@ -9,14 +9,17 @@
 import SpriteKit
 
 struct GameConstants {
-    static let gravity: CGFloat = -5.8
-    static let heroScale: CGFloat = 0.25
-    static let heroRect = CGSize(width: 20, height: 40)
+    static let gravity: CGFloat = -9.8
+    static let heroScale: CGFloat = 0.2
+    static let heroRect = CGSize(width: 40, height: 80)
+    static let heroStart = CGPoint(x: 100, y: 400)
     static let jumpImpulse: CGFloat = 600
+    static let speed: Double = 20
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var ourHero: HeroSprite?
+    var platforms: [SKNode]?
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -24,6 +27,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         self.physicsBody?.categoryBitMask = ColliderType.Edge.rawValue
+        
+//        world.name = "world"
+//        addChild(world)
+//        
+        ourHero = HeroSprite(atPosition: GameConstants.heroStart)
+        self.addChild(ourHero!)
+        
+        platforms = [SKNode]()
+        addPlatform()
+    }
+    
+    func addPlatform() {
+        let width = 2048
+        let platform = PlatformSprite(width: width)
+        var delay = Double(width)/GameConstants.speed/60 + 0.2
+        platform.position.x = size.width + CGFloat(width)/2
+        platforms?.append(platform)
+        addChild(platform)
+        runAction(SKAction.sequence(
+        [
+            SKAction.waitForDuration(delay),
+            SKAction.runBlock(addPlatform)
+        ]))
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -31,10 +57,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in (touches as! Set<UITouch>) {
             if let h = ourHero {
-                h.flap()
+                h.jump()
             } else {
                 let location = touch.locationInNode(self)
-                ourHero = HeroSprite.create(location)
+                ourHero = HeroSprite(atPosition: location)
                 self.addChild(ourHero!)
             }
         }
@@ -42,6 +68,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        for p in platforms! {
+            p.position.x -= CGFloat(GameConstants.speed)
+        }
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
@@ -57,8 +86,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if firstBody.categoryBitMask == ColliderType.Hero.rawValue {
             if secondBody.categoryBitMask == ColliderType.Edge.rawValue {
                 debugPrintln("We died.")
-                ourHero!.removeFromParent()
-                ourHero = nil
+                if let h = ourHero {
+                    h.removeFromParent()
+                    ourHero = nil
+                }
             }
         }
     }

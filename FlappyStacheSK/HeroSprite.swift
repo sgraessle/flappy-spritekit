@@ -25,7 +25,19 @@ class HeroSprite : SKSpriteNode {
     }
     var runFrames: [SKTexture]?
     
-    class func create(location: CGPoint) -> HeroSprite {
+    init(atPosition: CGPoint, frames: [SKTexture]) {
+        let first = frames[0]
+        super.init(texture: first, color: SKColor.whiteColor(), size: first.size())
+        
+        runFrames = frames
+        xScale = GameConstants.heroScale
+        yScale = GameConstants.heroScale
+        position = atPosition
+        configurePhysicsBody()
+        runningHero()
+    }
+    
+    convenience init(atPosition: CGPoint) {
         let heroAnimatedAtlas = SKTextureAtlas(named: "Hero")
         var walkFrames = [SKTexture]()
         
@@ -35,15 +47,11 @@ class HeroSprite : SKSpriteNode {
             walkFrames.append(heroAnimatedAtlas.textureNamed(textureName))
         }
         
-        let firstFrame = walkFrames[0]
-        let sprite = HeroSprite(texture: firstFrame)
-        sprite.runFrames = walkFrames
-        sprite.xScale = GameConstants.heroScale
-        sprite.yScale = GameConstants.heroScale
-        sprite.position = location
-        sprite.configurePhysicsBody()
-        sprite.runningHero()
-        return sprite
+        self.init(atPosition: atPosition, frames: walkFrames)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     func configurePhysicsBody() {
@@ -67,10 +75,8 @@ class HeroSprite : SKSpriteNode {
             withKey: "runningHero")
     }
     
-    func flap() {
+    func jump() {
         physicsBody!.velocity = CGVectorMake(0, 0)
         physicsBody!.applyImpulse(CGVectorMake(0, GameConstants.jumpImpulse))
-
-        runAction(SKAction.animateWithTextures(runFrames!, timePerFrame: 0.2))
-    }
+   }
 }

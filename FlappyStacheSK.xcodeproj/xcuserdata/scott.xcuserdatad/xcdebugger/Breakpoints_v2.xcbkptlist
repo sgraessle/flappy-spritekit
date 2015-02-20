@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlappyStacheSK/GameScene.swift"
-            timestampString = "445996152.345015"
+            timestampString = "446084603.260333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "didBeginContact(_:)"
             landmarkType = "5">
          </BreakpointContent>
