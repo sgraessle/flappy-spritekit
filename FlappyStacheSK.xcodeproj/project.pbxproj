@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D20E0F5A1A950C2E000B0662 /* Hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F591A950C2E000B0662 /* Hero.atlas */; };
+		D21125DF1A9BE6A70094BF1A /* Hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D21125DE1A9BE6A70094BF1A /* Hero.atlas */; };
 		D28823501A9693EC0093A50E /* PlatformSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288234F1A9693EC0093A50E /* PlatformSprite.swift */; };
 		D2D837B21A97A1710095449C /* TiledSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D837B11A97A1710095449C /* TiledSprite.swift */; };
 		D2EB20A81A8D65AA00510971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB20A71A8D65AA00510971 /* AppDelegate.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D20E0F591A950C2E000B0662 /* Hero.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hero.atlas; sourceTree = "<group>"; };
+		D21125DE1A9BE6A70094BF1A /* Hero.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hero.atlas; sourceTree = "<group>"; };
 		D288234F1A9693EC0093A50E /* PlatformSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformSprite.swift; sourceTree = "<group>"; };
 		D2D837B11A97A1710095449C /* TiledSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledSprite.swift; sourceTree = "<group>"; };
 		D2EB20A21A8D65AA00510971 /* FlappyStacheSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyStacheSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +89,7 @@
 		D2EB20A41A8D65AA00510971 /* FlappyStacheSK */ = {
 			isa = PBXGroup;
 			children = (
-				D20E0F591A950C2E000B0662 /* Hero.atlas */,
+				D21125DE1A9BE6A70094BF1A /* Hero.atlas */,
 				D2EB20CC1A8E5AC400510971 /* Sprites */,
 				D2EB20CB1A8E5AAE00510971 /* Scenes */,
 				D2EB20A71A8D65AA00510971 /* AppDelegate.swift */,
@@ -226,8 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21125DF1A9BE6A70094BF1A /* Hero.atlas in Resources */,
 				D2EB20B61A8D65AA00510971 /* LaunchScreen.xib in Resources */,
-				D20E0F5A1A950C2E000B0662 /* Hero.atlas in Resources */,
 				D2EB20B31A8D65AA00510971 /* Images.xcassets in Resources */,
 				D2EB20AA1A8D65AA00510971 /* GameScene.sks in Resources */,
 				D2EB20B11A8D65AA00510971 /* Main.storyboard in Resources */,
@@ -383,6 +383,7 @@
 				INFOPLIST_FILE = FlappyStacheSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -393,6 +394,7 @@
 				INFOPLIST_FILE = FlappyStacheSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
